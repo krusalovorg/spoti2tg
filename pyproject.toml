@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spoti2tg"
+version = "0.1.0"
+description = "Python library for posting Spotify now playing to Telegram"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "spoti2tg contributors" }]
+dependencies = [
+    "aiogram>=3.22.0",
+    "python-dotenv>=1.0.1",
+    "winsdk>=1.0.0b10; platform_system == 'Windows'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.5.0",
+]
+
+[tool.setuptools]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
